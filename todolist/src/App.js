@@ -24,7 +24,14 @@ function App() {
     }
   };
 
-
+  const toggleDone = (taskId) => {
+    setTasks(tasks.map(task => {
+      if (task.id === taskId) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }));
+  };
 
   return (
     <div className="App">
@@ -40,6 +47,11 @@ function App() {
       <ul>
         {tasks.map(task => (
           <li key={task.id}>
+            <input
+              type="checkbox"
+              checked={task.done}
+              onChange={() => toggleDone(task.id)}
+            />
             <span style={{ textDecoration: task.done ? 'line-through' : 'none' }}>
               {task.text}
             </span>
