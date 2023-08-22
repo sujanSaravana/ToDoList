@@ -24,6 +24,10 @@ function App() {
     }
   };
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter(task => task.id !== taskId));
+  };
+
   const toggleDone = (taskId) => {
     setTasks(tasks.map(task => {
       if (task.id === taskId) {
@@ -33,28 +37,33 @@ function App() {
     }));
   };
 
+
   return (
     <div className="App">
-      <div>
+      <div className='toggle-btn'>
         <button onClick={toggleTheme} className='toggleBtn'>Toggle Theme</button>
       </div>
-      <div>
-        <h1>To Do List</h1>
-        <input value={newTask} onChange={e => setNewTask(e.target.value)}></input>
-        <button onClick={add}>ADD</button>  
-      </div>  
-      <div>
+      <div className='title'>
+        <h1>Todo List</h1>
+      </div>
+      <div className='add-task'>
+        <input value={newTask} onChange={e => setNewTask(e.target.value)} className='add-input'></input>
+        <button onClick={add} className='add-btn'>ADD</button>  
+      </div>
+      <div className='list'>
       <ul>
         {tasks.map(task => (
           <li key={task.id}>
             <input
               type="checkbox"
+              className='checkbox'
               checked={task.done}
               onChange={() => toggleDone(task.id)}
             />
             <span style={{ textDecoration: task.done ? 'line-through' : 'none' }}>
               {task.text}
             </span>
+            <button onClick={() => deleteTask(task.id)} className='dlt-btn'>Delete</button>
           </li>
         ))}
       </ul>

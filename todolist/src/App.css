@@ -1,9 +1,165 @@
-.dark {
-  background-color: #000000;
-  color: #fff;
+.toggle-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.toggleBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggleBtn:hover {
+  background-color: #0056b3;
+}
+
+.checkbox{
+  border-radius: 200cm;
+  border: 1.5cm;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.light .list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; 
+  padding: 10px;
+  width: 520px;
+  background-color: #c8dff5;
 }
 
 .light {
-  background-color: #fff;
-  color: #000000;
+  background-color: #E2EEF8;
+  color: #022B3A;
 }
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-input {
+  width: 500px; 
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+}
+
+.light .add-btn {
+  margin-top: 10px;
+  padding: 10px 246px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.light .add-btn:hover {
+  background-color: white;
+}
+
+.light .dlt-btn{
+  background-color: #007bff;
+  height: 40px;
+  width: 90px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.light .dlt-btn:hover {
+  background-color: red;
+}
+
+.dark {
+  background-color: #091825;
+  color: #fff;
+}
+
+.dark .title{
+
+}
+
+.dark .add-btn {
+  margin-top: 10px;
+  padding: 10px 246px;
+  font-size: 18px;
+  background-color: #4E96D4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.dark .list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; 
+  padding: 10px;
+  width: 520px;
+  background-color: #0C1F31;
+}
+
+.dark .dlt-btn{
+  background-color: #4E96D4;
+  height: 40px;
+  width: 90px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.dark .dlt-btn:hover {
+  background-color: red;
+}
+
+.dark .add-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
